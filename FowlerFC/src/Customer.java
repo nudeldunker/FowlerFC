@@ -33,7 +33,7 @@ class Customer {
         return result;
     }
 	/**
-	 * @deprecated Use {@link Rental#getCharge()} instead
+	 * @deprecated Use {@link #MISSING()} instead
 	 */
 	private double amountFor(Rental each) {
 		return each.getCharge();
@@ -64,7 +64,8 @@ class Customer {
 		String result = "<H1>Rentals for <EM>" + getName() + "</EM></H1><P>\n";
 		while (enum_rentals.hasMoreElements()) {
 		Rental each = (Rental) enum_rentals.nextElement();
-		35//wo kommt die her?
+		//35 
+		//wo kommt die her?
 		//show figures for each rental
 		result += each.getMovie().getTitle()+ ": " +
 		String.valueOf(each.getCharge()) + "<BR>\n";

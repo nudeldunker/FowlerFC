@@ -6,15 +6,38 @@ public class Movie {
     private int priceCode;
     public Movie(String newtitle, int newpriceCode) {
         title = newtitle;
-        priceCode = newpriceCode;
+        //priceCode = newpriceCode;
+        setPriceCode(newpriceCode);
     }
     public int getPriceCode() {
         return priceCode;
     }
     public void setPriceCode(int arg) {
-        priceCode = arg;
+        //priceCode = arg;
+    	
+    	switch (arg) {
+    	case REGULAR:
+    		price = new RegularPrice();
+    		break;
+    	case CHILDRENS:
+    		price = new ChildrensPrice();
+    		break;
+    	case NEW_RELEASE:
+    		price = new NewReleasePrice();
+    		break;
+    	default:
+    		throw new IllegalArgumentException("Incorrect Price Code");
+    	}
     }
+    private Price price;
+        
     public String getTitle (){
         return title;
-    };
+    }
+	/**
+	 * @deprecated Use {@link Price#getCharge(Rental)} instead
+	 */
+	double getCharge(Rental rental) {
+		return price.getCharge(rental);
+	};
 }
