@@ -37,7 +37,7 @@ public class Movie {
 	/**
 	 * @deprecated Use {@link Price#getCharge(Rental)} instead
 	 */
-	double getCharge(Rental rental) {
-		return price.getCharge(rental);
+	double getCharge(int daysRented) {
+		return price.getCharge(daysRented);
 	};
 }

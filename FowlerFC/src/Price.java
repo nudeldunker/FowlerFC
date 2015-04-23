@@ -2,7 +2,7 @@
 public abstract class Price {
 	abstract int getPriceCode();
 
-	double getCharge(Rental rental) {
+	abstract double getCharge(int daysRented);/* {
 	    double thisAmount = 0;
 	    switch (rental.getMovie().getPriceCode()) {
 	        case Movie.REGULAR:
@@ -20,5 +20,5 @@ public abstract class Price {
 	            break;
 	    }
 	    return thisAmount;
-	}
+	}*/
 }

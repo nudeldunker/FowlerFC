@@ -15,7 +15,7 @@ class Rental {
 	 * @deprecated Use {@link #MISSING()} instead
 	 */
 	double getCharge() {
-		return movie.getCharge(this);
+		return movie.getCharge(daysRented);
 	}
 	public int getFrequentRenterPoints() {
 		
