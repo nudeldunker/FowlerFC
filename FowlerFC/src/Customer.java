@@ -64,16 +64,17 @@ class Customer {
 		String result = "<H1>Rentals for <EM>" + getName() + "</EM></H1><P>\n";
 		while (enum_rentals.hasMoreElements()) {
 		Rental each = (Rental) enum_rentals.nextElement();
+<<<<<<< HEAD
+=======
+		35//wo kommt die her?
+>>>>>>> origin/master
 		//show figures for each rental
 		result += each.getMovie().getTitle()+ ": " +
 		String.valueOf(each.getCharge()) + "<BR>\n";
 		}
 		//add footer lines
-		result += "<P>You owe <EM>" + String.valueOf(getTotalCharge()) +
-		"</EM><P>\n";
-		result += "On this rental you earned <EM>" +
-		String.valueOf(getTotalFrequentRenterPoints()) +
-		"</EM> frequent renter points<P>";
+		result += "<P>You owe <EM>" + String.valueOf(getTotalCharge()) + "</EM><P>\n";
+		result += "On this rental you earned <EM>" + String.valueOf(getTotalFrequentRenterPoints()) + "</EM> frequent renter points<P>";
 		return result;
 	}
     
