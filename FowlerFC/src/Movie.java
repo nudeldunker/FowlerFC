@@ -39,5 +39,11 @@ public class Movie {
 	 */
 	double getCharge(int daysRented) {
 		return price.getCharge(daysRented);
-	};
+	}
+	/**
+	 * @deprecated Use {@link Price#getFrequentRenterPoints(Rental)} instead
+	 */
+	int getFrequentRenterPoints(int daysRented) {
+		return price.getFrequentRenterPoints(daysRented);
+	}
 }

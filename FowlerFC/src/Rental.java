@@ -17,13 +17,11 @@ class Rental {
 	double getCharge() {
 		return movie.getCharge(daysRented);
 	}
-	public int getFrequentRenterPoints() {
-		
-		if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) 
-	&&
-		   getDaysRented() > 1) return 2;
-		
-		return 1;
+	/**
+	 * @deprecated Use {@link #MISSING()} instead
+	 */
+	public int getFrequentRenterPoints(int daysRented) {
+		return movie.getFrequentRenterPoints(daysRented);
 	}
 	
 }
