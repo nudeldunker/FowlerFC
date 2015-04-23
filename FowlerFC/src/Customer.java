@@ -65,9 +65,14 @@ class Customer {
 		while (enum_rentals.hasMoreElements()) {
 		Rental each = (Rental) enum_rentals.nextElement();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		35//wo kommt die her?
 >>>>>>> origin/master
+=======
+		//35 
+		//wo kommt die her?
+>>>>>>> 198723d03e43ff0071fd1320acced01d9e1378c2
 		//show figures for each rental
 		result += each.getMovie().getTitle()+ ": " +
 		String.valueOf(each.getCharge()) + "<BR>\n";
